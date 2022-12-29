@@ -1,0 +1,452 @@
+---
+layout: handbook-page-toc
+title: Engineering
+---
+
+## On this page
+{:.no_toc .hidden-md .hidden-lg}
+
+- TOC
+{:toc .hidden-md .hidden-lg}
+
+## FY23 Direction
+
+GitLab has a [Three-Year Strategy](https://about.gitlab.com/company/strategy/), and we're excited to see every member of the Engineering division contribute to achieving it. Whether you're creating something new or improving something that already exists, we want you to feel empowered to bring your best ideas for influencing the product direction through improved scalability, usability, resilience, and system architectures. And when you feel like you need to expand your knowledge in a particular area, know that you're supported in having the resources to learn and improve your skills.
+
+### Usability
+Having a product that people enjoy using is critical to our company’s success. Many users rely on GitLab every single workday to create their own great products. When we offer experiences that make their jobs faster and easier, we support them in building success in their own careers&mdash;a responsibility that we take seriously. And when our users are successful, we’re more successful, too, as evidenced by a McKinsey study showing [32% higher revenue growth in a 5-year period](https://about.gitlab.com/handbook/product/ux/#fy23-direction) for companies that focus on great design.
+
+That’s why part of our FY23 focus is to [raise our System Usability Scale score](https://about.gitlab.com/company/strategy/#2-build-on-our-open-core-strength) through efforts like burning down significant ([Sev 1](https://gitlab.com/groups/gitlab-org/-/issues/?sort=created_date&state=opened&label_name%5B%5D=SUS%3A%3AImpacting&label_name%5B%5D=severity%3A%3A1&first_page_size=100) and [Sev 2](https://gitlab.com/groups/gitlab-org/-/issues/?sort=created_date&state=opened&label_name%5B%5D=SUS%3A%3AImpacting&label_name%5B%5D=severity%3A%3A2&first_page_size=100)) usability issues, addressing [Usability Benchmark insights](https://gitlab.com/groups/gitlab-org/-/issues/?sort=created_date&state=opened&label_name%5B%5D=Usability%20benchmark&first_page_size=100), and migrating our UI to single-source-of-truth Pajamas components for better consistency, accessibility, and general usability.
+
+### Community Contributions
+We have a 3-year goal of [reaching 1,000 monthly contributors](https://about.gitlab.com/company/strategy/#2-build-on-our-open-core-strength) as a way to mature new stages, add customer-desired features that aren’t on our roadmap, and even translate our product into multiple languages. To build towards that goal, in FY23, we’re enhancing our Contributor Education to help support high-quality contributions that align with our approach to product development. We’re also improving our response time for contributions and providing timely feedback for a better contributor experience. Lastly, we’re focused on a step-change increase of contributors by creating a [Leading Organizations](https://about.gitlab.com/handbook/engineering/workflow/code-review/#leading-organizations) program tailored for full-time contributors.
+
+### Diversity
+[Diverse teams perform better.](https://www.cio.com/article/189194/5-ways-diversity-and-inclusion-help-teams-perform-better.html#:~:text=With%20diversity%20comes%20multiple%20perspectives,better%20decisions%20based%20on%20facts.) They provide a sense of belonging that leads to higher levels of trust, better decision making, and a larger talent pool. [They also focus more on facts, process facts more carefully, and are more innovative.](https://hbr.org/2016/11/why-diverse-teams-are-smarter) By hiring globally and increasing the numbers of women and ethnic minorities in the Engineering division, we’re helping everyone bring their best selves to work.
+
+### Growing our team
+Hiring is still a top priority in FY23, and we're excited to continue hiring people who are passionate about our product and have the skills to make it the best DevSecOps tool in the market. Our current focus areas include reducing the amount of time between offer and start dates and hiring a diverse team (see above). We're also implementing industry-standard approaches like structured, behavioral, and situational interviewing to help ensure a consistent interview process that helps to identify the best candidate for every role. We’re excited to have a recruiting org to partner with as we balance the time that managers spend recruiting against the time they spend investing in their current team members.
+
+### Expand customer focus through depth, breadth, and stability
+As expected, a large part of our focus in FY23 is on improving our product. Following are some large projects to note.
+
+For **Enterprise customers**, we’re refining our product to meet the levels of security and reliability that customers rightfully demand from SaaS platforms _(SaaS Reliability)_. We’re also providing more robust utilization metrics to help them discover features relevant to their own DevOps transformations _(Usage Reporting)_ and offering the ability to purchase and manage licenses without spending time contacting Sales or Support _(E-Commerce and Cloud Licensing)_. Lastly, in response to Enterprise customer requests, we're adding features to support Suggested Reviewers, better portfolio management through Work Items, and Audit Events that provide additional visibility into user passive actions.
+
+For **Free Users**, we’re becoming more efficient with our open core offering, so that we can continue to support and give back to students, startups, educational institutions, open source projects, GitLab contributors, and nonprofits _(SaaS Free User Efficiency)_.
+
+For **Federal Agencies**, we’re obtaining FedRAMP certification to strengthen confidence in the security standards required on our SaaS offering. This is a mandated prerequisite for United States federal agencies to use our product.
+
+For **Hosted Customers**, we're supporting feature parity between Self-Managed and GitLab Hosted environments through the Workspace initiative. We're also launching GitLab Dedicated for customers who want the flexibility of cloud with the security and performance of a single-tenant environment.
+
+For customers using **CI/CD**, we're expanding the available types of Runners to include macOS, Linux/Docker, and Windows, and we're autoscaling build agents.
+
+### Department-specific FY23 Direction Statements
+In alphabetical order:
+
+* [Development Department FY23 Direction](/handbook/engineering/development/#fy23-direction)
+* [Incubation Department FY23 Direction](/handbook/engineering/incubation/#fy23-direction)
+* [Infrastructure Department FY23 Direction](/handbook/engineering/infrastructure/#fy23-direction)
+* [Quality Department FY23 Direction](/handbook/engineering/quality/#fy23-direction)
+* [Security Department FY23 Direction](/handbook/security/#fy23-direction)
+* [Support Department FY23 Direction](/handbook/support/#fy23-direction)
+
+## Communication<a name="reach-engineering"></a>
+
+GitLab Engineering values clear, concise, transparent, asynchronous, and frequent communication. Here are our most important modes of communication:
+
+- [**GitLab Issue Tracker**](https://gitlab.com/gitlab-org/gitlab/issues): Please use confidential issues for topics that should only be visible to team members at GitLab.
+- [**Start with a Merge Request**](/handbook/communication/#start-with-a-merge-request): The most effective way to make a change to the company is to make a proposal in the form of a merge request to the handbook and assign it to the [DRI](/handbook/people-group/directly-responsible-individuals/).
+- [**Monitoring Dashboards**](/handbook/engineering/monitoring/): When we look to achieve a desired outcome, we must be able to quantify and measure progress towards that goal. By making the initial analysis that drives decision making repeatable, we continuously sanity check our initial assumptions along that journey.
+- [**Engineering All-Hands**](cto-staff/#engineering-all-hands).
+- **Engineering Week-in-Review document**: Every week a reminder is sent to the [#engineering-fyi](https://gitlab.slack.com/archives/CJWA4E9UG) Slack channel to read the latest update.  The agenda is internal only, please search in Google Drive for 'Engineering Week-in-Review'.
+- **CTO Office Hours**: Each week [Ashley Kramer](https://gitlab.com/akramer) holds open office hours on Zoom for questions, feedback, and handbook changes. It's typically Thursdays for 1 hour and alternates between EMEA and APAC-friendly timeslots. See Ashley's calendar for current times.
+- **Slack**: See next section on [Keeping yourself informed](#keeping-yourself-informed).
+
+### Keeping yourself informed
+
+As part of a fully-distributed organization such as GitLab, it is important to stay informed about engineering-led initiatives.
+We employ [multimodal communication](/handbook/communication/#multimodal-communication), which describes the minimum set of communication channels we'll broadcast to.
+
+For the Engineering division, any important initiative will be announced in:
+
+- The Engineering mailing list
+    - All members of the division should become members as part of the onboarding process. If this is not the case for you, reach out to your manager.
+- Slack channel
+    - [`#engineering-fyi`](https://gitlab.slack.com/archives/CJWA4E9UG)
+        - The channel membership is mandatory
+- [Engineering Week-in-Review](https://drive.google.com/drive/search?q=engineering%20week%20in%20review) (internal)
+
+Other Slack channels that are Engineering focused and are good sources of information:
+
+- `#cto`
+- `#development`
+- `#development-guidelines`
+- `#incubation-eng`
+- `#production`
+- `#quality`
+- `#incident-management`
+- `#support_gitlab-com`
+- `#support_self-managed`
+
+There is no requirement to join all of these channels. It is up to the person sharing to ensure that the same message is shared across all channels. Ideally, this message should be a one sentence summary with a link to an issue to allow for a single source of truth for any feedback.
+
+### Engineering-fyi channel
+
+The #engineering-fyi is used for large scale announcements and to drive views of the engineering week in review document. Everyone can contribute an announcement as long as the following criteria are met:
+
+- The announcement provides a link back to the appropriate item
+- The announcement involves a majority of one or more departments
+- The announcement is NOT to be company wide and does not need amplication for the department.  In this situation use #company-fyi
+
+The posting model here is one of trusting judgement of the individual making the announcement.  You do not need to ask for permission to post.
+
+## Engineering Departments
+
+There are seven departments within the Engineering Division:
+
+- [Development Department](/handbook/engineering/development/)
+- [Incubation Engineering Department](/handbook/engineering/incubation/)
+- [Infrastructure Department](/handbook/engineering/infrastructure/)
+- [Quality Department](/handbook/engineering/quality/)
+- [Security Department](/handbook/security/)
+- [Support Engineering Department](/handbook/support/)
+
+## Other Related Pages
+
+- [CTO Staff](/handbook/engineering/cto-staff/)
+- [Engineering Management Issue Board](https://gitlab.com/gitlab-com/www-gitlab-com/-/boards/980804?&label_name%5B%5D=Engineering%20Management)
+- [Engineering OKRs](/handbook/engineering/okrs/)
+- [Engineering Metrics](/handbook/engineering/metrics/)
+- [GitLab Innovation Program](/handbook/legal/innovation-program/), managed by the GitLab Legal Team
+- [Development Principles](/handbook/engineering/development/principles/)
+- [Frequently Used Projects](/handbook/engineering/projects/)
+- [Pajamas Design System](/handbook/product/ux/pajamas-design-system/)
+- [Engineering READMEs](/handbook/engineering/readmes/)
+- [Database Engineering](/handbook/engineering/development/database/)
+- [Engineering Automation](/handbook/engineering/automation/)
+- [R&D Tax Credit Applications](/handbook/engineering/tax-credits)
+
+### Workflows
+
+- [Developer onboarding](/handbook/developer-onboarding/)
+- [Engineering Demo Process](/handbook/engineering/demos/)
+- [Engineering Workflow](/handbook/engineering/workflow/)
+    - [Code Review](/handbook/engineering/workflow/code-review/)
+    - [Security Issues](/handbook/engineering/workflow/#security-issues)
+- [GitLab Repositories](/handbook/engineering/gitlab-repositories/)
+- [Issue Triage Policies](/handbook/engineering/quality/issue-triage/)
+- [Contributing to Go projects](https://docs.gitlab.com/ee/development/go_guide/index.html)
+- [Wider Community Merge Request Triage Policies](/handbook/engineering/quality/merge-request-triage/)
+- [Root Cause Analysis](/handbook/engineering/root-cause-analysis/)
+- [Critical Security Releases](https://gitlab.com/gitlab-org/release/docs/blob/master/general/security/process.md#critical-security-releases)
+- [Incident Management](/handbook/engineering/infrastructure/incident-management/)
+
+### GitLab in Production
+
+- [Workflow Diagram](/handbook/engineering/workflow/related-workflows.html)
+- [Error Budgets](/handbook/engineering/error-budgets/)
+- [Performance of GitLab](/handbook/engineering/performance/)
+- [Monitoring of GitLab.com](/handbook/engineering/monitoring/)
+- [Production Readiness Guide](https://gitlab.com/gitlab-com/infrastructure/blob/master/.gitlab/issue_templates/production_readiness.md)
+
+### People Management
+
+- [Engineering Compensation Roadmaps](/handbook/engineering/compensation-roadmaps/)
+- [Engineering Career Development](/handbook/engineering/career-development/)
+- [Engineering Internship](/handbook/engineering/internships/)
+- [Engineering Management](/handbook/engineering/management/)
+- [Volunteer Coaching program for URGs](/handbook/engineering/volunteer-coaches-for-urgs/)
+- [Starting New Teams](/handbook/engineering/starting-new-teams/)
+
+<%= partial "includes/engineering-allocations.md" %>
+
+### Cross-Functional Prioritization
+
+See the [Cross-Functional Prioritization page](/handbook/engineering/cross-functional-prioritization) for more information.
+
+<%= partial "includes/feature-change-locks.md" %>
+
+## Folding@home and COVID-19
+
+Team members are welcome to run [Folding@home](https://foldingathome.org/) on their company provided computers. Folding@home is a distributed computing network that is [searching](https://foldingathome.org/2020/03/10/covid19-update/) for therapies for the [COVID-19](https://www.cdc.gov/coronavirus/2019-ncov/index.html) respiratory illness among other diseases. We recommend running it at night if you have high daily compute workloads. Also keep your computer plugged in. We considered potential security and hardware implications in [this issue](https://gitlab.com/gitlab-com/www-gitlab-com/-/issues/6875).
+
+If you would like to join a team with other GitLab team members, there is a `GitLab Team Members` team for Folding@home. When setting up or changing your Folding@home identity, you can add team `245256`. This is not a competition, but simply to track how much our team members have contributed overall. You can view our statistics on our [team page](https://stats.foldingathome.org/team/245256). You can discuss with other GitLab team members in the [#folding-at-home slack channel](https://gitlab.slack.com/archives/C0109M19SAV/p1584979706000200).
+
+## Hiring Practices
+
+Please reference our [internal hiring repository](https://gitlab.com/gitlab-com/people-group/hiring-processes/-/tree/master/Engineering) for internal best practices and guidelines.
+
+
+### R&D New Headcount GHPID Request, Backfill & Transfer Process
+
+Whenever a team member departs from GitLab or they transfer to a different role, the below process should be followed to open a backfill. This process ensures alignment between the Department Heads, Finance business partner and Talent Acquisition. For departures, a backfill can only be opened once a departure or resignation is official where we've received written confirmation of the departure including the last working day and the People Business Partner has submitted the [Offboarding Form](https://about.gitlab.com/handbook/people-group/offboarding/#starting-the-process) to the People Ops team. For transfers, a backfill can only be opened once a transfer is official where an [offer letter stating the transfer date](https://about.gitlab.com/handbook/people-group/promotions-transfers/#internal-transfer-start-date) has been completed.
+
+1. **Manager**: Manager is made aware of team member departure (either through our [voluntary](/handbook/people-group/offboarding/#voluntary-offboarding), [involuntary](/handbook/people-group/offboarding/#involuntary-offboarding) offboarding) or [transfer process](https://about.gitlab.com/handbook/people-group/promotions-transfers/#department-transfers).
+1. **Manager**: Manager shares the offboarding or transfer with their [People Business Partner](/handbook/people-group/#people-business-partner-alignment-to-division) and direct manager, up to their Department Head. This can be done in a dedicated private Slack channel if needed. Please do not involve Finance Business Partners (FBP) in these private channels.
+1. **Department Head**: The department head fills out the 'utilizing_backfill_headcount' Issue template in the [R&D Headcount Project](https://gitlab.com/gitlab-headcount/r-and-d-headcount/) in GitLab, tagging the Finance Business Partner, People Business Partner, Recruiting Manager, and Recruiter, and adding their department label to the Issue.
+    1. Issue template includes:
+    1. Departing team member's name
+    1. Departing team member's last day
+    1. Role
+    1. Department
+    1. Hiring Manager
+1. **Finance Business Partner**: The FBP (Finance Business Partner) will need to be tagged  when the Issue is filled out. FBP will end date the attrition headcount, create the backfill headcount in Adaptive, and generate a GHPID for the backfill headcount. They will then add the GHPID  to the Issue and mark the step as complete.  This signals the forecast has been updated with the backfill. If the FBP needs more information they will ask the requester at this time before providing a GHPID. If there is a change in the associated backfill expense, they will work with the leader to identify tradeoff options before approving.
+1. **Recruiter**: The Recruiter will create the GreenHouse req and report the new req number on the issue, checking off when complete, adding the “Req Created” label to the Issue.
+1. **Department Head**: The department head circles back with the hiring manager to share the GHPID directly.
+1. **Hiring Manager**: The hiring manager engages talent acquisition to open the req and begin the process.
+
+As the Department Head is ready to request GHPIDs for budgeted new headcount, the below process should be followed to open a new headcount.
+
+1. **Department Head**: Department head will use the New HC Issue template to request, including details of the roles, hiring managers, and projects they’re associated with, tagging the FBP, Recruiter, PBP, and Recruiting Manager. Add the department label and the “new headcount” label to the Issue.
+1. **Finance Business Partner**: The FBP will create a GHPID for the forecasted role in Adaptive, add the GHPID to the Issue and mark the step as complete signaling the forecast has been updated. If the FBP needs more information they will ask the department leader before providing a GHPID. If there is an increase in the expense for the new headcount request from current forecast (this could be driven by an earlier start date, increase in level, or change in roles), they will work with the department leader at that time to identify tradeoff options to fund the increase before providing the GHPID and approving.
+1. **Recruiter**: The recruiter will create the Greenhouse req and report the new req number on the issue, checking off when complete, adding the “Req Created” label to the Issue.
+
+If two Department Heads agree to move a headcount between their teams, the following process should be followed.
+
+1. **Department Head**: Department head of the department acquiring the headcount will initiate an Issue, tagging the Department head that currently owns the headcount. Each respective department leader will approve the issue indicating that both departments are in agreement with the move.
+1. **Finance Business Partner**: The FBP will create a GHPID for the forecasted role in Adaptive, add the GHPID to the Issue and mark the step as complete signaling the forecast has been updated. If the FBP needs more information they will ask the department leader before providing a GHPID.
+1. **Recruiter**: The recruiter will create the Greenhouse req and report the new req number on the issue, checking off when complete, adding the “Req Created” label to the Issue.
+
+### Shadowing VPE's interviews
+
+- Interview shadowing should be done for quality and training purposes with approval from the candidate prior to the scheduled interview time
+- Shadow will need to partner with Eric to determine the most beneficial interview to attend
+- Talent Acquisition or EBA will request permission from the candidate prior to including the shadow on the invite to set candidate experience expectations
+- The shadowing GitLab team member should be prepped on what (if anything) will be said to the candidate during the interview
+- Immediately following the shadowed interview (or shortly thereafter, schedules permitting) the shadow and Eric will have a 30 min sync and submit scorecard for the candidate
+
+## Engineering Management Issue Board
+
+The VP of Engineering and their direct reports track our highest priorities in the [Engineering Management Issue Board](https://gitlab.com/gitlab-com/www-gitlab-com/-/boards/980804?&label_name%5B%5D=Engineering%20Management), rather than to do lists, Google Doc action items, or other places. The reasons for this are:
+
+- It's a way to use our own product more (dogfooding)
+- It lends itself to our preferred async method of working
+- It's transparency across the company for what senior leaders in Engineering are working on
+- It allows for delegation while reducing the need for status check-ins by relying on issue notifications
+
+Here are the mechanics of making this work:
+
+- Use the `Engineering Management` label to get it on the board, and the department label to get it in progress (e.g. `Development Department`)
+- Mention the appropriate people in the issue so they become participants and receive notifications
+- We can re-prioritize in 1:1’s or staff meetings periodically
+- Directors can delegate items to anyone in their department
+- Link to issues on this board in places where status needs to be tracked _e.g._ 1:1 docs, staff meeting notes, etc
+- It's okay to link to other issues, boards, epics, etc in the body of an issue to avoid duplicating content
+- Set the issue due date
+- An issue per quarterly OKR is expected
+- If the product of an issue is _not_ an MR, please assign it back to the stakeholder to verify the output and close it for you.
+- If you close out an issue with the `CEO Interest` label, please post it to [#ceo](https://gitlab.slack.com/messages/C3MAZRM8W)
+
+## Engineering Performance Indicator process
+
+The [Quality Department](/handbook/engineering/quality) is the DRI for Engineering Performance Indicators. Work regarding KPI / RPI is tracked on the [engineering metrics board and task process](/handbook/engineering/quality#engineering-metrics-task-process).
+
+## Unlearning Previous Corporate Cultures
+
+In GitLab Engineering we are serious about concepts like [servant leadership](https://en.wikipedia.org/wiki/Servant_leadership), [over-communication](https://www.weforum.org/agenda/2015/03/why-you-need-to-over-communicate/), and furthering our [company value of transparency](/handbook/values/#transparency). You may have joined GitLab from another organization that did not share the same values or techniques. Perhaps you're accustomed to more corporate politics? You may need to go through a period of "unlearning" to be able to take advantage of our results-focused, people-friendly environment. It takes time to develop trust in a new culture.
+
+Less common, but even more important, is to make certain you don't unintentionally bring any mal-adaptive behaviors to GitLab from these other environments.
+
+We encourage you to read the engineering section of the handbook as part of your onboarding, ask questions of your peers and managers, and reflect on how you can help us better live our culture:
+
+- [Why handbook first?](/handbook/handbook-usage/#why-handbook-first)
+- [The Engineering Dual Career Track](/handbook/engineering/career-development/#individual-contribution-vs-management)
+- Our most challenging core values: [Iteration](/handbook/values/#iteration) and [Transparency](/handbook/values/#transparency)
+- Please keep discussions in public Slack channels (avoid direct messages and private channels)
+- To calibrate, try making yourself uncomfortable every day for 3 months with how transparent and vulnerable you are being with your manager and peers
+
+## Manual verification
+
+We manually verify that our code works as expected.
+Automated test coverage is essential,
+but manual verification provides a higher level of confidence that features behave as intended and bugs are fixed.
+
+We manually verify issues when they are in the `workflow::verification` state.
+Generally, after you have manually verified something, you can close the associated issue.
+See the [Product Development Flow](../product-development-flow/) to learn more about this issue state.
+
+We manually verify in the staging environment whenever possible.
+In certain cases we may need to manually verify in the production environment.
+
+If you need to test features that are built for GitLab Ultimate then you can get added to the [issue-reproduce](https://gitlab.com/issue-reproduce)
+group on production and staging environments by asking in the [#development](https://gitlab.slack.com/archives/C02PF508L) Slack channel.
+These groups are are on an Ultimate plan.
+
+## Engineering Departments, Sub-departments & Teams
+
+- [Customer Support Department](/handbook/support/)
+- [Development Department](/handbook/engineering/development/)
+    - [Data Science Sub-department](/handbook/engineering/development/dev/)
+      - [Anti-Abuse Team](/handbook/engineering/development/data-science/anti-abuse/)
+      - [AI Assisted Team](/handbook/engineering/development/data-science/ai-assisted/)
+    - [Dev Sub-department](/handbook/engineering/development/dev/)
+        - [Create:Editor Backend Team](/handbook/engineering/development/dev/create/editor/)
+        - [Create:Source Code Backend Team](/handbook/engineering/development/dev/create/source-code-be/)
+        - [Create:Source Code Frontend Team](/handbook/engineering/development/dev/create/code-review/frontend/)
+        - [Create Frontend Team](/handbook/engineering/frontend/create/)
+        - [Create:Editor Team](/handbook/engineering/development/dev/create/editor/)
+        - [Manage:Foundations](/handbook/engineering/development/dev/manage/foundations/)
+        - [Manage:Integrations](/handbook/engineering/development/dev/manage/integrations/)
+        - [Gitaly Team](/handbook/engineering/development/dev/gitaly/)
+        - [Manage Backend Team](/handbook/engineering/development/dev/manage/)
+        - [Plan:Project Management Backend Team](/handbook/engineering/development/dev/plan-project-management-be/)
+        - [Plan:Product Planning & Plan:Certify Backend Team](/handbook/engineering/development/dev/plan-product-planning-certify-be/)
+        - [Plan Frontend Team](/handbook/engineering/development/dev/fe-plan/)
+    - [Enablement Sub-department](/handbook/engineering/development/enablement/)
+        - [Database Team](/handbook/engineering/development/enablement/database/)
+        - [Distribution Team](/handbook/engineering/development/enablement/distribution/)
+        - [Geo Team](/handbook/engineering/development/enablement/geo/)
+        - [Memory Team](/handbook/engineering/development/enablement/memory/)
+        - [Search Team](/handbook/engineering/development/enablement/search/)
+    - [Fulfillment Sub-department](/handbook/engineering/development/fulfillment/)
+        - [Fulfillment Platform team](/handbook/engineering/development/fulfillment/fulfillment-platform/)
+        - [Purchase Team](/handbook/engineering/development/fulfillment/purchase/)
+        - [Provision Team](/handbook/engineering/development/fulfillment/provision/)
+        - [Utilization Team](/handbook/engineering/development/fulfillment/utilization/)
+    - [Growth Sub-department](/handbook/engineering/development/growth/)
+        - [Acquisition Team](/handbook/engineering/development/growth/acquisition/)
+        - [Activation Team](/handbook/engineering/development/growth/activation/)
+    - [Ops Sub-department](/handbook/engineering/development/ops/)
+        - [Pipeline Execution Team](/handbook/engineering/development/ops/verify/pipeline-execution/)
+        - [Runner Team](/handbook/engineering/development/ops/verify/runner/)
+        - [Pipeline Insights Team](/handbook/engineering/development/ops/verify/pipeline-insights/)
+        - [Package Team](/handbook/engineering/development/ops/package/)
+        - [Release](/handbook/engineering/development/ops/release/)
+        - [Configure](/handbook/engineering/development/ops/configure/)
+        - [Monitor Stage Team](/handbook/engineering/development/ops/monitor/)
+        - [Monitor:Health Team](/handbook/engineering/development/ops/monitor/health/)
+    - [Govern Sub-department](/handbook/engineering/development/sec/govern/)
+        - [Compliance Team](/handbook/engineering/development/sec/govern/compliance/)
+        - [Threat Insights Team](/handbook/engineering/development/sec/govern/threat-insights/)
+        - [Security Policies Team](/handbook/engineering/development/sec/govern/security-policies/)
+    - [Secure Sub-department](/handbook/engineering/development/sec/secure/)
+        - [Composition Analysis](/handbook/engineering/development/sec/secure/composition-analysis/)
+        - [Static Analysis](/handbook/engineering/development/sec/secure/static-analysis/)
+        - [Dynamic Analysis](/handbook/engineering/development/sec/secure/dynamic-analysis/)
+        - [API Security](/handbook/engineering/development/sec/secure/api-security/)
+        - [Vulnerability Research](/handbook/engineering/development/sec/secure/vulnerability-research/)
+- [Incubation Engineering Department](/handbook/engineering/incubation/)
+- [Infrastructure Department](/handbook/engineering/infrastructure/)
+    - [Sec Reliability Engineering Team](/handbook/engineering/infrastructure/team/reliability/#reliability-engineering-secure--govern)
+    - [CI/CD & Enablement Reliability Engineering Team](/handbook/engineering/infrastructure/team/reliability/#reliability-engineering-cicd--enablement)
+    - [Dev & Ops Reliability Engineering Team](/handbook/engineering/infrastructure/team/reliability/#reliability-engineering-dev--ops)
+    - [Delivery Team](/handbook/engineering/infrastructure/team/delivery/)
+    - [Scalability Team](/handbook/engineering/infrastructure/team/scalability/)
+- [Quality Department](/handbook/engineering/quality/)
+    - [Dev Quality Engineering Team](/handbook/engineering/quality/quality-engineering/dev-qe-team/)
+    - [Ops & Analytics Quality Engineering team](/handbook/engineering/quality/quality-engineering/ops-analytics-qe-team/)
+    - [Enablement & SaaS Platforms Quality Engineering Team](/handbook/engineering/quality/quality-engineering/enablement-saas-platforms-qe-team/)
+    - [Sec & Data Science Quality Engineering Team](/handbook/engineering/quality/quality-engineering/sec-data-science-qe-team/)
+    - [Engineering Productivity Team](/handbook/engineering/quality/engineering-productivity/)
+    - [Engineering Analytics Team](/handbook/engineering/quality/engineering-analytics/)
+- [Security Department](/handbook/security/)
+    - [Vulnerability Management](/handbook/security/threat-management/vulnerability-management/)
+- [Frontend Department](/handbook/engineering/frontend/)
+
+## Headcount planning
+
+Before the beginning of each fiscal year, and at various check points throughout the year, we plan the size and shape of the Engineering and Product Management functions together to maintain symmetry.
+
+The process should take place in a single artifact (usually a spreadsheet, [current spreadsheet][FY2020-headcount-sheet]), and follow these steps:
+
+1. **Product:** Supplies headcount numbers for PMs, UX roles (product design, research, and technical writing), and development groups proportional to our roadmap efforts
+1. **Engineering:** Supplies feedback on [headcount planning](https://about.gitlab.com/handbook/engineering/development/#development-headcount-planning) to Product, headcount for management roles in the development department, full plans for the Security,  Quality, and Infrastructure departments, and is the DRI for ensuring team structure aligns with guidance on [span of control](https://about.gitlab.com/company/team/structure/#management-group) (points 5 and 6) or an exception is warranted.`
+1. **CEO:** Supplies feedback to Engineering and Product, or gives final approval
+
+Note: Support is part of the engineering function but is budgeted as 'cost of sales' instead of research and development. Headcount planning is done separately according to a different model.
+
+[FY2020-headcount-sheet]: https://docs.google.com/spreadsheets/d/1MUR2IhPxS0tQCKYMlJSpC0uA0spEYBPA7V--CzbWy8M
+
+## Long Term Profitability Targets
+
+The non support related departments within Engineering (Development, Infrastructure, Quality, and Security) have an expense target of 20% as a percentage of revenue.
+
+The Support target is 10% as a percentage of revenue.
+
+## Mentorship, Coaching and Engineering Programs
+
+### Line Managers and Senior Individual Contributors
+
+The [PlatoHQ Program](/handbook/engineering/plato/index.html) has a total of 10 Engineering Managers/Senior IC's participating. The program exists of both self-learning via an online portal and 1-1 sessions with a mentor.
+
+### Senior Leaders in Engineering
+
+The 7CTOs Program is run with 4 Senior leaders in Engineering. The program exists of peer mentoring sessions (forums) and effective network building.
+
+### CTO customer executive sponsor shadow
+
+The CTO is an [executive sponsor](/handbook/sales/field-operations/gtm-resources/#executive-account-sponsorship-program) for selected customers.
+
+A shadow program is available to everyone in engineering (especially senior leaders) in order to have an opportunity to observe and participate in one of the executive sponsor meetings. Doing so can be a great way to hear directly from customers about what they like about GitLab and about what we can improve. (This program is similar in some ways to the [CEO Shadow Program](https://about.gitlab.com/handbook/ceo/shadow/).
+
+If you choose to be a shadow, your responsibilities will be:
+
+- Read the notes for the meeting in advance
+- Load the conferencing program in advance that will be used in the meeting (as not all customers use Zoom)
+- Research topics that may of interest to the customer, as requested by the CTO in advance of the meeting
+- Introduce yourself in the meeting as the shadow for the CTO
+- Help to take notes during the meeting
+- Answer any questions that you may get during the meeting (based on your experiences)
+- Help to follow-up on some of the action items resulting from the meeting (as requested by the CTO)
+- After the meeting, provide feedback to the CTO
+- Note that there can be a maximum of two shadows in one meeting
+
+To request to be a shadow: Post a message in the #cto Slack channel, indicate your timezone, and CC the CTO's EBA Kristie Thomas.
+
+### How to find a mentor or become a mentor at GitLab
+
+There is a program to find a mentor or to become a mentor at GitLab described on [this handbook page](/handbook/people-group/learning-and-development/mentor/).
+
+### Engineering director shadow program
+
+You can find more information on this experimental program on the [Development Director Shadow Program](/handbook/engineering/development/shadow/director-shadow-program.html) handbook page.
+
+## Pairing Engineers on priority::1/severity::1 Issues
+
+In most cases, a single engineer and maintainer review are adequate to handle a priority::1/severity::1 issue. However, some issues are highly difficult or complicated. Engineers should treat these issues with a high sense of urgency. For a complicated priority::1/severity::1 issue, multiple engineers should be assigned based on the level of complexity. The issue description should include the team member and their responsibilities.
+
+| Team Member | Responsibility |
+| ----------- | -------------- |
+| `Team Member 1` | `Reproduce the Problem` |
+| `Team Member 2` | `Audit Code Base for other places where this may occur` |
+
+If we have cases where three or five or X people are needed, Engineering Managers should feel the freedom to execute on a plan quickly.
+
+Following this procedure will:
+
+- Decrease the time it takes to resolve priority::1/severity::1 issues
+- Allow for a smooth handover of the issue in case of OOO or End of the Work Day
+- Provide support for Engineers if they are stuck on a problem
+- Provide another set of eyes on topics with high urgency or securing security-related fixes
+
+## Engineering Proposed Initiatives
+
+Engineering is the primary advocate for the performance, availability, and security of the GitLab project. Product Management prioritizes all initiatives, so everyone in the engineering function should participate in the Product Management [prioritization process](/handbook/product/product-processes/#how-we-prioritize-work) to ensure that our project stays ahead in these areas. The following list should provide some guidelines around the initiatives that each engineering team should advocate for during their release planning:
+
+- Review fixes from our support team. These merge requests are tagged with the `Support Team Contributions` label.  You can [filter on open MRs](https://gitlab.com/gitlab-org/gitlab/-/merge_requests?label_name%5B%5D=Support%20Team%20Contributions).
+- Working on high priority issues as a result of [issue triaging](/handbook/engineering/quality/issue-triage/). This is our commitment to the community and we need to include some capacity to review MRs or work on defects raised by the community.
+- Improvements to the performance and scalability of a feature.  Again, the Product team should be involved in the definition of these issues but Engineering may lead here by clearly defining the recommended improvements.
+- Improvements to our toolchain in order to boost efficiency.
+
+## Canary Testing
+
+GitLab makes use of a 'Canary' stage. Production Canary is a series of servers running GitLab code in a production environment. The Canary stage contains code functional elements like web, container registry and git servers while sharing data elements such as sidekiq, database, and file storage with production. This allows UX code and most application logic code to be consumed by a smaller subset of users under real world scenarios before being made available to all users on GitLab.com.
+
+Information on canary testing has been moved to dedicated page [covering the
+canary stage and how to use it](/handbook/engineering/infrastructure/environments/canary-stage)
+
+## DevOps Slack Channels
+
+There are primarily two Slack channels which developers may be called upon to assist the production team
+when something appears to be amiss with GitLab.com:
+
+1. `#backend`: For backend-related issues (e.g. error 500s, high database load, etc.)
+1. `#frontend`: For frontend-related issues (e.g. JavaScript errors, buttons not working, etc.)
+
+Treat questions or requests from production team for immediate urgency with high priority.
+
+## Engineering private handbook
+
+There are some engineering handbook topics that we cannot be publicly transparent about.  These topics can be viewed by GitLab team members in the [engineering section of the private handbook](https://internal-handbook.gitlab.io/handbook/engineering/).
+
+If you experience a page not found (404) error when attempting to access the internal handbook, you may need to register to use it via first browsing to the [internal handbook authorization page]( https://gitlab.com/internal-handbook/internal-handbook.gitlab.io/).

@@ -1,0 +1,186 @@
+---
+layout: handbook-page-toc
+title: "Reliability Engineering"
+---
+
+## On this page
+{:.no_toc .hidden-md .hidden-lg}
+
+- TOC
+{:toc .hidden-md .hidden-lg}
+
+If you are a GitLab team member and are looking to alert Reliability Engineering about an availability issue with GitLab.com, please find quick instructions to report an incident here: [Reporting an Incident](/handbook/engineering/infrastructure/incident-management/#reporting-an-incident).
+{: .alert .alert-danger}
+
+If you are a GitLab team member looking for assistance from Reliability Engineering, please see the [Getting Assistance](#getting-assistance) section.
+{: .alert .alert-info}
+
+## Who We Are
+
+Reliability Engineering is responsible for all of GitLab's user-facing services, with their primary responsibility being GitLab.com. Site Reliability Engineers (SREs) ensure the availability of these services, building the tools and automation to monitor and enable this availability. These user-facing services include a multitude of environments, including staging, GitLab.com, and dev.GitLab.org, among others (see the [list of environments](/handbook/engineering/infrastructure/environments/)).
+
+## Vision
+
+**Reliability Engineering** ensures that GitLab's customers can rely on GitLab.com for their mission-critical workloads. We approach availability as an engineering challenge and empower our counterparts in Development to make the best possible infrastructure decisions. We own and iterate often on [how we manage incidents](/handbook/engineering/infrastructure/incident-management/) and continually derive and share our learnings by conducting [thorough reviews of those incidents](/handbook/engineering/infrastructure/incident-review/).
+
+## Getting Assistance
+
+If you're a GitLab team member and are looking to alert Reliability Engineering about an availability issue with GitLab.com, please find quick instructions to report an incident here: [Reporting an Incident](/handbook/engineering/infrastructure/incident-management/#reporting-an-incident).
+{: .alert .alert-danger}
+
+If you'd like our assistance, please use one of the issue generation templates below and the work will be routed appropriately:
+
+* [Open a General Request Issue](https://gitlab.com/gitlab-com/gl-infra/reliability/-/issues/new?issuable_template=default) - follow this link to create a general issue for the Reliability Team.
+
+We can also be reached in Slack in the [#production](https://gitlab.slack.com/archives/C101F3796) channel for questions related to GitLab.com and in the [#infrastructure-lounge](https://gitlab.slack.com/archives/CB3LSMEJV) channel for all other questions.
+
+## Deploying changes to GitLab.com
+
+All larger features, configuration changes, and new services must go through a [Production Readiness] review.
+
+## Tenets
+
+1. [**Change Management**](/handbook/engineering/infrastructure/change-management/), [**Incident Management**](/handbook/engineering/infrastructure/incident-management/), [**Incident Review**](/handbook/engineering/infrastructure/incident-review/) and [**Delta Management**](/handbook/engineering/infrastructure/library/production/deltas/) are owned by Reliability Engineering.
+1. Each team member is able to work on all team projects.
+1. The team is able to reach conclusions independently all the time, consensus most of the time.
+1. Career development paths are clear.
+1. The team maintains a database of SRE knowledge through documentation, training sessions, and outreach.
+1. We leverage the GitLab product where we can in our toolchain.
+
+## How We Work
+
+We maintain a single source of truth epic for all work underway for the Reliability team. That epic can be found at [GitLab SaaS Reliability - work queue](https://gitlab.com/groups/gitlab-com/gl-infra/-/epics/509) and represents the current state of project work assigned within squads. That epic references projects detailed in the form of sub-epics.
+
+### How We Work -- Team Configuration
+
+#### On-Call
+ * Manage alerts and incidents as described on the [Incident Management Page](https://about.gitlab.com/handbook/engineering/infrastructure/incident-management/#engineer-on-call-eoc-responsibilities)
+
+#### Standing Squads
+
+##### General Squad
+
+ * Addresses [Infrastructure Corrective Actions](https://gitlab.com/groups/gitlab-com/gl-infra/-/boards/1181205?label_name[]=corrective%20action) as required
+ * Works on [priortized issues](https://about.gitlab.com/handbook/engineering/infrastructure/team/reliability/issues.html#issue-priority) from the [Reliability General Backlog](https://gitlab.com/gitlab-com/gl-infra/reliability/-/boards/3993753?not%5Blabel_name%5D%5B%5D=squad%3A%3A*&assignee_id=None)
+ * Updates Infrastructure metrics as part of the [Engineering Allocation Process](https://about.gitlab.com/handbook/engineering/#engineering-allocation).
+    * This is the responsibility of the General Squad Engineering Manager within Reliability to update these metrics each week or arrange for someone else to cover when out-of-office.
+
+##### Observability Squad
+
+ * Build, maintain, and improve observability services.
+ * Provide long term improvements to observability services.
+ * Services: Prometheus, Thanos, Grafana, [Logging](https://gitlab.com/gitlab-com/runbooks/-/tree/master/docs/logging) 
+ * Examples:
+    * [Prometheus Service Issues](https://gitlab.com/gitlab-com/gl-infra/reliability/-/issues/?label_name%5B%5D=Service%3A%3APrometheus)
+    * [Thanos Service Issues](https://gitlab.com/gitlab-com/gl-infra/reliability/-/issues/?sort=updated_desc&state=opened&label_name%5B%5D=Service%3A%3AThanos&first_page_size=100)
+    * [Elastic Search Service Issues](https://gitlab.com/gitlab-com/gl-infra/reliability/-/issues/?label_name%5B%5D=Service%3A%3AElasticsearch)
+
+##### Reliability Foundations Squad
+  * Build, maintain, and improve core infrastructure services.
+  * Assist customers with infrastructure related application support.
+  * Services and Tools: [GKE / K8s Workloads](https://gitlab.com/gitlab-com/gl-infra/k8s-workloads), Chef, Terraform, Vault, Edge Services (Load Balancing, DNS, CDN)
+  * Examples:
+    * [Sev1/2 Corrective Actions](https://gitlab.com/gitlab-com/gl-infra/reliability/-/boards/3164592?label_name%5B%5D=corrective%20action)
+    * [OS Upgrades](https://gitlab.com/gitlab-com/gl-infra/reliability/-/issues/15029)
+    * [Security Patching](https://gitlab.com/gitlab-com/gl-infra/production/-/issues/6605)
+    * [General Requests from the backlog](https://gitlab.com/groups/gitlab-com/gl-infra/-/epics/592) that DO NOT require a dedicated project squad.
+     
+##### Database Reliability Squad
+This squad is comprised of DBREs and one or two SREs to support their learning to implement DB related infra changes.
+
+ * Build, maintain, and improve database services.
+
+##### Standing Squad Membership Duration
+  * Minimum of 2 quarters 
+  * Recommended maximum of 4 quarters
+  * The Squad Membership SSOT is here: https://about.gitlab.com/handbook/engineering/infrastructure/team/reliability/squads.html
+
+##### Standing Squad Roles
+1. Squad DRI
+  * Organize communication between squad members
+  * Prioritize incoming work and identify new opportunities for the squad
+  * Report squad results [as documented on the Projects Page](https://about.gitlab.com/handbook/engineering/infrastructure/team/reliability/projects.html)
+  * Train Shadow Squad DRI to be the future Squad DRI
+  * Squad DRIs can be Reliability Engineers _OR_ SREs.
+2. Shadow Squad DRI (SSD)
+  * Spend two quarters shadowing the DRI in preparation for becoming DRI.
+  * Provide squad leadership support when Squad DRI is OOO or On-Call.
+
+#### Stable Counterparts
+
+The Reliability Team works together with [Stage Groups](https://about.gitlab.com/handbook/product/categories/) to create Stable Counterparts.  See the dedicated [Stable Counterparts handbook page](https://about.gitlab.com/handbook/engineering/infrastructure/team/stable-counterpart.html) for more details on this process.
+
+### How We Work -- General Workflow
+
+1. Customers open new issues in [Reliability Issue Tracker](https://gitlab.com/gitlab-com/gl-infra/reliability/-/issues)
+2. New issues go through a [management and prioritization process](https://about.gitlab.com/handbook/engineering/infrastructure/team/reliability/issues.html)
+3. Issues are classified as either general or project work and added to the [backlog](https://gitlab.com/gitlab-com/gl-infra/reliability/-/boards/3993753?assignee_id=None)
+
+### How We Work -- Sources of work
+
+1. Issues generated by customers (teams outside Infrastructure) via one of the paths documented in the [Getting Assistance](#getting-assistance) section. These issues are automatically added to the triage backlog and are processed by Reliability managers.
+1. Issues generated as [`Corrective Actions`](/handbook/engineering/infrastructure/incident-management/#sts=Corrective%20Actions) for incidents.
+1. Issues generated as miscellaneous small tasks found in the day-to-day of an SRE/DBRE/EM
+1. Issues generated as part of Project Work.
+
+### How We Work -- Projects
+
+- See the [Projects Page](/handbook/engineering/infrastructure/team/reliability/projects.html) for details on how projects are managed within the Reliability Team.
+
+### How We Work -- Issues
+- Issues are filed and processed within the [Reliability Issue Tracker](https://gitlab.com/gitlab-com/gl-infra/reliability/-/issues).
+- Issues are assigned to engineers or [project squads](https://about.gitlab.com/handbook/engineering/infrastructure/team/reliability/projects.html#project-squads) based on based on [priority](https://about.gitlab.com/handbook/engineering/infrastructure/team/reliability/issues.html#issue-priority).
+
+For a more detailed overview of how issues are triaged and prioritized, see the [issues page](https://about.gitlab.com/handbook/engineering/infrastructure/team/reliability/issues.html).
+
+### How We Work -- Corrective Actions workflow
+
+[Corrective Actions](https://about.gitlab.com/handbook/engineering/infrastructure/incident-management/#corrective-actions) are issues arising from incidents. See the link for the suggested way to create them.
+
+We use [this board](https://gitlab.com/gitlab-com/gl-infra/infrastructure/-/boards/3164592?label_name[]=corrective%20action&label_name[]=team%3A%3AReliability) to track corrective actions work. Corrective Actions are also an important [performance indicator](https://about.gitlab.com/handbook/engineering/infrastructure/performance-indicators/#corrective-action-slo) for the Infrastructure Department.
+
+Currently there is a squad assigned to this work with the focus of 1) refining all open CAs and 2) Burning down the backlog of open CAs.
+The slack channel for that squad is #infra-corrective-actions. Anyone is welcome and encouraged to help with the work of CAs.
+
+#### Refinement of open CAs
+
+The process is as follows:
+1. Choose an open, unrefined "corrective action" issue (ie it does not have a "ca::refined label") in the GitLab Infrastructure Team project. Add the "workflow-infra::Under Review" label, and assign it to yourself. This ensures that other engineers don't pick up the same issue for refinement asynchronously. Issues with the label "ca::triage" or any of "severity::1", "severity::2", "priority::1", "priority::2" should be prioritized for refinement. [This list](https://gitlab.com/groups/gitlab-com/gl-infra/-/issues?scope=all&state=opened&label_name[]=corrective%20action&not[label_name][]=ca%3A%3Arefined) can be a useful place to start.
+1. Read the issue carefully, including any linked incidents, to get context.
+  1. If there is no linked incident, this issue may be mislabeled. Confirm with the issue creator and if there is no incident related to this issue, remove the "corrective action" label. In this case you are done refining this issue.
+1. Ensure it has a severity label on it - this is the highest severity of linked incident(s).
+1. Ensure it has a priority label on it, indicating the urgency of the issue. For guidance on priority level, see the engineering [triage handbook page](https://about.gitlab.com/handbook/engineering/quality/issue-triage/). When in doubt, feel free to ask the issue creator or other relevant engineers for input.
+1. Based on the above, possible actions are:
+    1. Cancel the issue by adding the label "workflow-infra::Cancelled" and then closing the issue
+        1. Because it is no longer relevant due to other changes in the infrastructure, whether already executed or planned.
+        1. You consider it an infrequent enough or low priority problem that you don't think it is currently worth prioritizing the work given the team's current resources.
+        1. In either case, add a note to the issue explaining the reason for cancelling.
+        1. Don't hesitate to cancel old, low priority CAs. An issue can always be reopened if it is deemed to be an ongoing problem, in which case we can increase the severity/priority and reassess.
+    1. Indicate that this CA is ready for work by adding the label "workflow-infra::Ready"
+        1. This indicates that the issue is well scoped (to be able to be completed with at most a few days' engineering time), and has the necessary information and context for an engineer to pick up for work.
+    1. Promote to an Epic
+        1. Sometimes CAs are high priority but very large in scope (more than a few days' worth of work). In this case the CA can be promoted to an Epic. Update the description of the new epic to show that it was created from a CA and make sure that the incident is referenced and linked in that paragraph.
+        1. If it falls within the CA squad's scope, leave the Corrective Action label in place. Otherwise remove it with a note.
+        1. New issues that are created related to an Epic with a "corrective action" label should not get that label, so as not to artificially inflate the numbers for tracking purposes.
+    1. Move to another team/project
+        1. Sometimes it becomes clear that a particular corrective action is not an Infrastructure issue. Add a note and move the issue to the appropriate project. If the issue is the responsibility of a stage group, consider adding the `~infradev` label.
+    1. Needs more information
+        1. If context is missing or scope is unclear, ping the relevant engineers or managers in the issue to gain clarity so that a determination can be made for one of the above four cases. Sometimes we bring issues we need more input on up for discussion at one of our weekly Reliability Discussion meetings for this purpose.
+    1. Mark the issue as "workflow-infra::Ready" and add the label "ca::refined" to indicate the CA squad has looked at it. This indicates the issue is A. still relevant B. well scoped C. has enough context for the engineer picking up the issue and D. is ready for work.
+1. When refinement is complete and the issue has one of above outcomes, label the issue with "ca::refined" to indicate refinement is completed and remove the "workflow-infra::Under Review" label. Unassign yourself from the issue unless you know you will be the one taking on the work.
+1. Sometimes when refining a series of Corrective Action issues, a pattern may emerge that indicates that perhaps project level work is called for. Feel free to create an issue explaining your findings and bring this to the attention of the current DRI for corrective actions and/or an engineering manager.
+
+#### Working on CAs
+
+1. Choose a CA from the Ready column from the above linked board that has no engineer assigned to it. Start with the highest severity/priority level issue that you feel able to take on.
+1. Assign yourself to the issue and move it to the "in progress" column or add the label "workflow-infra::In Progress".
+1. Reach out to other engineers as needed for more context or pairing. CAs cover a very wide range of infrastructure areas, and you are not expected to know everything. Often it is much more efficient to pair with someone more knowledgable in that domain.
+1. When the work is complete, remember to close the issue or move it to the "Done" column.
+
+[Production Readiness]: /handbook/engineering/infrastructure/production/readiness/
+
+### How We Work -- OKR
+
+OKRs that require status tracking should be updated each Wednesday. When updating the progress percentage of any given KR, it is not necessary to provide extensive notes. One sentence with a link to a larger update is sufficient in most cases. It is also acceptable to do a check-in without providing a note on a single occasion, but not over several check-ins.
+
+

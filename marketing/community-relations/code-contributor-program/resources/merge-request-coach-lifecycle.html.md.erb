@@ -1,0 +1,69 @@
+---
+layout: markdown_page
+title: "Merge Request Coach Lifecycle"
+---
+
+## Applying to become a Merge Request Coach
+
+1. Create an MR to add "Merge Request Coach" to "departments" and "expertise" sections in your team page entry (see [example](https://gitlab.com/gitlab-com/www-gitlab-com/-/merge_requests/102653)).
+1. Make sure you add at least [one project and role](https://gitlab.com/gitlab-com/www-gitlab-com/-/tree/master/data/team_members/person#data-structure) to your team entry page, too.
+1. Use the `Merge Request Coach` MR template to explain your motivation in the MR body:
+   * Why you want to become a Merge Request Coach?
+   * How much time you are planning to spend on it?
+   * Which duties you are focusing on (e.g. triage, finish stale MRs)?
+1. Mention `@gitlab-org/quality/contributor-success` so they are aware of the application.
+1. Mention your manager and ask them to merge it.
+1. Once accepted, one of the coaches with Owner permissions should add you to the `@gitlab-org/coaches` group.
+
+## Stepping down gracefully
+
+If you are no longer able to serve as a Merge Request Coach, you should identify another GitLab team member to take your place so that the capacity of the remaining coaches remains the same. When you are ready to step down, you need to:
+
+1. Make an announcement on the `#mr-coaching` Slack channel.
+1. Update the `team.yml` file to remove "Merge Request Coach".
+1. Remove yourself from the `@gitlab-org/coaches` group.
+
+## References/resources
+
+1. [Merge Request Coach responsibilities](/job-families/expert/merge-request-coach#responsibilities)
+1. [Merge Request Coach collaboration guidelines](/job-families/expert/merge-request-coach#collaboration-guidelines)
+1. [Gitter room for contributors](https://gitter.im/gitlabhq/contributors): please join if you're not part of it already!
+1. [Community Discord channel](https://discord.gg/gitlab): please join if you haven't already!
+
+<% coaches = Gitlab::Homepage.team.merge_request_coaches %>
+
+## Current Merge Request Coaches
+
+GitLab currently has <%= coaches.length %> merge request coaches:
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Group</th>
+    <%#<th>Location</th> %>
+    <th>Departments</th>
+  </tr>
+</thead>
+
+<tbody>
+<% coaches.sort_by(&:group).each do |member| %>
+  <tr><td><a href="/company/team/#<%= member.anchor %>"><%= member.name %></a></td>
+  <td>
+    <%= member.group %>
+  </td>
+  <%# <td> %>
+      <%# if member.locality || member.country %>
+      <%# location = [member.locality, member.country].compact.join(", ") %>
+      <%#= location %>
+      <%#= member.country_info&.emoji_flag %>
+      <%# end %>
+   <%# </td> %>
+   <td>
+     <%= member.departments.to_sentence %>
+   </td>
+
+  </tr>
+  <% end %>
+  </tbody>
+</table>

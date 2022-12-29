@@ -1,0 +1,112 @@
+---
+layout: handbook-page-toc
+title: "Enablement & SaaS Platforms Quality Engineering team"
+description: "Quality Engineering team for the Enablement & SaaS Platforms  Sections"
+---
+
+## On this page
+{:.no_toc .hidden-md .hidden-lg}
+
+- TOC
+{:toc .hidden-md .hidden-lg}
+
+## Common Links
+
+| **GitLab Team Handle** | [`@gl-quality/enablement-qe`](https://gitlab.com/gl-quality/enablement-qe) |
+| **Slack Channel** | [#g_qe_enablement_platform](https://gitlab.slack.com/archives/CTP7N0PM4) |
+| **Team Boards** | [Team Board](https://gitlab.com/groups/gitlab-org/-/boards/978354) |
+| **Issue Tracker** | [quality/team-tasks](https://gitlab.com/gitlab-org/quality/team-tasks/issues/) |
+
+Engineers in this team are embedded in the [Enablement section] and [SaaS Platforms section].
+
+## Team members
+
+Quality Engineering Manager: Kassandra Svoboda
+
+[Enablement section]
+
+| S.No 	| Stage       	| Group                     | SET Counterpart                                                        |
+|------	|---------------|---------------------------|------------------------------------------------------------------------|
+| 1    	| [Systems]     | [Distribution]            | Grant Young <br/> Nailia Iskhakova                                     |
+| 2   	| [Systems]     | [Geo]                     | Nick Westbury                                                        	 |
+| 3   	| [Systems]     | [Gitaly]                  | John McDonnell                                                         |
+| 4    	| [Data Stores] | [Application Performance] | TBH                                                                    |
+| 5   	| [Data Stores] | [Global Search]           | Erick Banks                                                            |
+| 6  	| [Data Stores] | [Database]                | TBH                                                                    |
+| 7   	| [Data Stores] | [Pods]                    | TBH                                                                    |
+
+[SaaS Platforms section]
+
+| S.No 	| Stage           	| Group                          | SET Counterpart                                                         |
+|------	|-------------------|--------------------------------|-------------------------------------------------------------------------|
+| 1    	| [SaaS Platforms]  | [Delivery]                     | TBH                                                                     |
+| 2    	| [SaaS Platforms]  | [Scalability]                  | TBH                                                                     |
+| 3    	| [SaaS Platforms]  | [GitLab Dedicated]             | TBH                                                                     |
+| 4    	| [SaaS Platforms]  | [US Public Sector Services]    | Andy Hohenner                                                                     |
+
+## OKRs 
+
+Every quarter, the team commits to [Objectives and Key Results (OKRs)](/company/okrs/). The below shows current and previous quarter OKRs, it updates automatically as the quarter progresses.
+
+### Enablement section
+
+#### Current quarter
+
+<iframe src="https://app.ally.io/public/7W1KkROYCD0mg1z" class="dashboard-embed" height="900" width="100%" style="border:none;"> </iframe>
+
+#### Previous quarter
+
+<iframe src="https://app.ally.io/public/mZA4v7tmyqd9jDi" class="dashboard-embed" height="900" width="100%" style="border:none;"> </iframe>
+
+## Quality Performance Indicators for Enablement Section
+
+(<a href="https://app.periscopedata.com/app/gitlab/736012/Quality-Embedded-Dashboard" target="_blank">Sisense↗</a>)
+<embed width="100%" height="300" src="<%= signed_periscope_url({ dashboard: 736012, embed: 'v2', filters: [{name: 'Development_Section' , value: 'enablement' }]}) %>">
+
+## Projects
+
+* [GitLab Performance Tool]
+* [GitLab Browser Performance Tool]
+* [GitLab Environment Toolkit]
+* [Performance Test Data]
+* [Performance Docker Images]
+* [Zero Downtime Testing Tool]
+* [Reference Architectures]
+
+## Self-Managed Environment Triage
+
+There is a bi-weekly self-managed environment triage meeting involving various
+team members from the Enablement section, Support, Customer Success, and
+Technical Writing, which focuses on the following:
+* Triaging customers and prospects that are setting up new environments or migrating existing environments in line with our reference architectures.
+* Additions to or refinements of the reference architecture specs and documentation.
+
+For more information, please see the [Self-Managed Environment Triage board] and
+the [Self-Managed Environment Triage agenda] (internal only). To be added to the
+meetings, please reach out to the Quality Engineering Manager, Enablement.
+
+[Enablement section]: /handbook/product/categories/#enablement-section
+[Systems]: /handbook/product/categories/#systems-stage
+[Data Stores]: /handbook/product/categories/#data-stores-stage
+[Distribution]: /handbook/product/categories/#distribution-group
+[Geo]: /handbook/product/categories/#geo-group
+[Gitaly]: /handbook/product/categories/#gitaly-group
+[Application Performance]: /handbook/product/categories/#application-performance-group
+[Global Search]: /handbook/product/categories/#global-search-group
+[Database]: /handbook/product/categories/#database-group
+[Pods]: /handbook/product/categories/#pods-group
+[SaaS Platforms section]: /handbook/product/categories/#saas-platforms-section
+[SaaS Platforms]: /handbook/product/categories/#saas-platforms-stage
+[Delivery]: /handbook/product/categories/#delivery-group
+[Scalability]: /handbook/product/categories/#scalability-group
+[GitLab Dedicated]: /handbook/product/categories/#gitlab-dedicated-group
+[US Public Sector Services]: /handbook/product/categories/#us-public-sector-services-group
+[GitLab Performance Tool]: https://gitlab.com/gitlab-org/quality/performance
+[GitLab Browser Performance Tool]: https://gitlab.com/gitlab-org/quality/performance-sitespeed
+[GitLab Environment Toolkit]: https://gitlab.com/gitlab-org/gitlab-environment-toolkit
+[Performance Test Data]: https://gitlab.com/gitlab-org/quality/performance-data
+[Performance Docker Images]: https://gitlab.com/gitlab-org/quality/performance-images
+[Zero Downtime Testing Tool]: https://gitlab.com/gitlab-org/quality/zero-downtime-testing-tool
+[Reference Architectures]: https://gitlab.com/gitlab-org/quality/reference-architectures
+[Self-Managed Environment Triage board]: https://gitlab.com/groups/gitlab-org/-/boards/1131633
+[Self-Managed Environment Triage agenda]: https://docs.google.com/document/d/1FpXtHlIEKNuTCooUn5MxlMvkNvml5UWeBNRHCcDfMrA/edit

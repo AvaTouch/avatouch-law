@@ -1,0 +1,223 @@
+---
+layout: handbook-page-toc
+title: "Infrastructure"
+description: "The Infrastructure Department is responsible for the availability, reliability, performance, and scalability of GitLab.com and other supporting services"
+---
+
+## On this page
+{:.no_toc .hidden-md .hidden-lg}
+
+- TOC
+{:toc .hidden-md .hidden-lg}
+
+
+## Mission
+
+The Infrastructure Department enables GitLab (the company) to deliver a single DevOps application, and GitLab SaaS users to focus on generating value for their own businesses by ensuring that we operate an enterprise-grade SaaS platform.
+
+The Infrastructure Department does this by focusing on **availability**, **reliability**, **performance**, and **scalability** efforts.
+These responsibilities have cost efficiency as an additional driving force, reinforced by the properly prioritized [**dogfooding**](#dogfooding) efforts.
+
+Many other teams also contribute to the success of the SaaS platform because [GitLab.com is not a role](/company/team/structure/#gitlabcom-isnt-a-role).
+However, it is the responsibility of the Infrastructure Department to drive the ongoing evolution of the SaaS platform, enabled by platform observability data.
+
+## Vision
+
+The Infrastructure Department operates a fast, secure, and reliable SaaS platform to which (and with which) [everyone can contribute][contribute].
+
+Integral part of this vision is to:
+
+1. Build a highly performant team of engineers, combining operational and software development experience to influence the best in reliable infrastructure.
+1. Work publicly in accordance with our [transparency] value.
+1. [Use our own product](#dogfooding) to prepare, build, deliver work, and support [the company strategy][strategy].
+1. Align our [strategy](#strategy) with the industry trends, company direction, and end customer needs.
+
+## FY23 Direction
+
+In FY23 we will work towards added stability and resiliency to support the ongoing growth of GitLab SaaS offerings and contribute ongoing efficiency towards GitLab development productivity.
+
+In support of improving these results, we are focusing on:
+
+### 1) Strengthened Reliability
+
+Continuing the collaborative efforts from the previous year throughout FY23 to gain additional reliability.
+1. Allocating effort towards managing tech debt backlog both through [Corrective Action](https://about.gitlab.com/handbook/engineering/infrastructure/performance-indicators/#corrective-action-slo) burndown, [Infradev efficiency](https://app.periscopedata.com/app/gitlab/899982/InfraDev) (internal only), and investing further in key project focus.
+1. Achieve key deliverables for our database platform in collaboration with Development. Key among these are current decomposition efforts and additional scaling efforts arising from that project.
+1. Deliver results from the focus on key cross-functional efforts specifically targeting Reliability. Efforts starting in Q3 will focus more specifically on Disaster Recovery. These efforts are expected to continue through FY24.
+
+### 2) Platform Improvements to Power New Revenue
+
+Contribute new platform management capabilities to expand our ability to meet our customers SaaS offering needs. GitLab Dedicated has been and will continue to be the focus of this effort. Much of our investment in Dedicated will also fuel other future platform efforts to continue offering customers our services where they want to consume them and to also scale our SaaS platform to many times future growth.
+
+### 3) Develop Depth in Key Technical Areas
+
+1. Continue current Redis focus from the new second Scalability team and evolve that focus as the scale increases but the maintenance becomes more boring. This may involve new teams focused on a vertical technology (like Redis) while Scalability moves on to a new challenge.
+1. Build on what we’ve started in the [Squad project model](https://about.gitlab.com/handbook/engineering/infrastructure/team/reliability/projects.html#project-squads----squad-list) and see more results from small groups focusing on fewer concurrent efforts.
+1. Partner with Development teams to fulfill initial [Stable Counterpart](/handbook/engineering/infrastructure/team/stable-counterpart.html) influence. As our staffing increases above the minimum oncall level, dedicate a larger percentage of new team member capacity towards enabling more efficiency and ownership across all of Engineering.
+
+### 4) Invest in Team Members Capabilities
+
+1. Increase allocation of effort and time for training and career development focus of managers and individual contributors.
+1. Deliver incident training opportunities and resources both within Infrastructure and across GitLab.  We don’t want to be focused only on incidents, but we do want to do them well when they occur.
+1. Build better awareness and a deeper set of information for [SRE role expectations](https://gitlab.com/gitlab-com/gl-infra/mstaff/-/issues/103). Every new and existing SRE deserves a better understanding of how to onboard and keep on top of our changing technology environment.
+
+
+---
+
+The direction is accomplished by using [Objectives and Key Results (OKRs)](https://gitlab.com/groups/gitlab-com/-/epics/1420).
+
+Initiatives driven within the Infrastructure Department, often spanning multiple quarters, are represented on the [Infrastructure Department epic](https://gitlab.com/groups/gitlab-com/-/epics/1049). This epic description also includes a [stack-ranked centralized roadmap table](https://gitlab.com/groups/gitlab-com/-/epics/1049#centralized-roadmap) meant to help inform relative prioritization for all material projects across Infrastructure Departments.
+
+Other strategic initiatives to achieve this vision are driven by the needs of enterprise customers looking to adopt GitLab.com. [The GitLab.com strategy](https://about.gitlab.com/direction/enablement/dotcom/) catalogs top customer requests for the SaaS offering and outlines strategic initiatves across both Infrastructure and Stage Groups needed to address these gaps.
+
+<%= partial "includes/we-are-also-product-development.md" %>
+
+## Design
+
+The [**Infrastructure Library**][library] contains documents that outline our thinking about the problems we are solving and represents the ***current state*** for any topic, playing a significant role in how we produce technical solutions to meet the challenges we face.
+
+## Dogfooding
+
+The Infrastructure department uses GitLab and GitLab features extensively as the main tool for operating many [environments](/handbook/engineering/infrastructure/environments/), including GitLab.com.
+
+We follow the same [dogfooding process](/handbook/engineering/development/principles/#dogfooding) as part of the Engineering function, while keeping the [department mission statement](#mission) as the primary prioritization driver. The prioritization process is aligned to [the Engineering function level prioritization process](/handbook/engineering/#prioritizing-technical-decisions) which defines where the priority of dogfooding lies with regards to other technical decisions the Infrastructure department makes.
+
+When we consider building tools to help us operate GitLab.com, we follow the [`5x rule`](/handbook/product/product-processes/#dogfooding-process) to determine whether to build the tool as a feature in GitLab or outside of GitLab. To track Infrastructure's contributions back into the GitLab product, we tag those issues with the appropriate [Dogfooding](https://gitlab.com/groups/gitlab-com/-/labels?utf8=%E2%9C%93&subscribed=&search=dogfooding) label.
+
+## Handbook use at the Infrastructure department
+
+At GitLab, we have a [handbook first policy](/handbook/handbook-usage/#why-handbook-first). It is how we communicate process changes, and how we build up a single source of truth for work that is being delivered every day.
+
+The [handbook usage page guide](/handbook/handbook-usage/) lists a number of general tips. Highlighting the ones that can be encountered most frequently in the Infrastructure department:
+
+1. The wider community can benefit from training materials, architectural diagrams, technical documentation, and how-to documentation. A good place for this detailed information is in the related project documentation. A handbook page can contain a high level overview, and link to more in-depth information placed in the project documentation.
+1. Think about the audience consuming the material in the handbook. A detailed run through of a GitLab.com operational runbook in the handbook might provide information that is not applicable to self-managed users, potentially causing confusion. Additionally, the handbook is not a go-to place for operational information, and grouping operational information together in a single place while explaining the general context with links as a reference will increase visibility.
+1. Ensure that the handbook pages are easy to consume. Checklists, onboarding, repeatable tasks should be either automated or created in a form of template that can be linked from the handbook.
+1. The handbook is the process. The handbook describes our principles, and our epics and issues are our principles put into practice.
+
+## Projects
+
+Classification of the Infrastructure department projects is described on the [infrastructure department projects page](/handbook/engineering/infrastructure/projects).
+
+The [infrastructure issue tracker](https://gitlab.com/gitlab-com/gl-infra/infrastructure/issues) is the backlog and a catch-all project for the infrastructure teams and tracks the work our teams are doing–unrelated to an ongoing change or incident.
+
+In addition to tracking the backlog, Infrastructure Department projects are captured in our [Infrastructure Department Epic](https://gitlab.com/groups/gitlab-com/-/epics/1049) as well as in our [Quarterly Objectives & Key Results](https://gitlab.com/groups/gitlab-com/-/epics/1420)
+
+## Teams
+
+The Infrastructure Department is comprised of three distinct groups:
+
+* [**Reliability**](/handbook/engineering/infrastructure/team/reliability/), which operate all user-facing GitLab services.
+* [**Delivery**](/handbook/engineering/infrastructure/team/delivery/), which focuses on GitLab's delivery of software releases to GitLab.com and the public at large.
+* [**Scalability**](/handbook/engineering/infrastructure/team/scalability/), which focuses on improving GitLab application at GitLab.com scale.
+
+### Getting Assistance from Infrastructure Teams
+
+To create an issue for the related teams you can use the links below:
+
+* [Delivery](https://gitlab.com/gitlab-com/gl-infra/delivery/-/issues/new)
+  * To learn more about how Delivery [prioritizes issues you can read this page](https://about.gitlab.com/handbook/engineering/infrastructure/team/delivery/#priority-labels).
+* [Reliability](https://gitlab.com/gitlab-com/gl-infra/reliability/-/issues/new?issuable_template=default)
+  * To learn more about how these issues are triaged you can [read more about how reliability triages issues here.](https://about.gitlab.com/handbook/engineering/infrastructure/team/reliability/issues.html#issue-board)
+* [Scalability](https://gitlab.com/gitlab-com/gl-infra/scalability/-/issues/new)
+  * The following page [explains how to engage with the Scalability Group.](https://about.gitlab.com/handbook/engineering/infrastructure/team/scalability/#working-with-us)
+
+
+
+Product Management duties for the Infrastructure Department are handled by the [Infrastructure PM](/handbook/engineering/infrastructure/product-management/), who reports into the Enablement Stage.
+
+For details on the Department's structure, see the [**Infrastructure Teams Handbook section**](/handbook/engineering/infrastructure/team/).
+
+## Stable Counterparts
+
+Infrastructure [Reliability Engineering Squads](./team/reliability/projects.html#project-squads----squad-list) may be aligned with [stage groups](/handbook/product/categories/#categories-a-z) as [stable counterparts](https://about.gitlab.com/blog/2018/10/16/an-ode-to-stable-counterparts/).
+
+[Stable Counterparts](./team/stable-counterpart.html) are used as a framework for managing reliable services at GitLab.  The framework provides guidelines for collaboration between [Stage Groups](/handbook/product/categories/#categories-a-z) and [Infrastructure Teams](#teams).  
+
+## Meetings 
+
+GitLab is a widely distributed company and we aim to work asynchronously most of the time. However, some topics deserve a real-time discussion. We should always look to re-evaluate such meetings to ensure they are continuing to add value. We follow all the [guidance for all-remote meetings](https://about.gitlab.com/company/culture/all-remote/meetings/), including items such as always starting and ending on time&mdash;or earlier.
+
+Our team [calendar](https://calendar.google.com/calendar?cid=Z2l0bGFiLmNvbV9vamk2ZGtpMWZyYzhnOHFxOWZldXUxanRkMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t) is shared with the company.
+
+Every scheduled team meeting _must_ have a Google Doc agenda attached to the invite. The agendas should be long-running and organized by date. Each meeting's agenda is set and reviewed before the start of each meeting. Everyone invited to the meeting should have edit rights to add agenda items before the start of the meeting and to take notes during the meeting.
+
+Meetings may have multiple topics. For each topic there should be one meeting. This helps to prevent conflicting information and inefficient duplication. Some meetings may deliberately be scheduled to occur twice to better include all global participants, but this is considered to be the _same_ meeting, just held at two times.
+
+|**Topics**|**Meeting**|**Participants**|**Cadence**|
+|Incident Review and followup|[Incident Review](https://docs.google.com/document/d/1Llm9tXHC2dNt_eercRUUXlUyWmOVw00wmXWQQbWvv2c/edit#) (internal only)|All Engineering|Tues|
+|Prioritization of Engineering work|[Engineering Allocation](https://docs.google.com/document/d/1j_9P8QlvaFO-XFoZTKZQsLUpm1wA2Vyf_Y83-9lX9tg/edit#) (internal only)|All Engineering|Tues|
+|Infrastructure Performance Indicator Review|[Infrastructure Key Meeting](https://docs.google.com/document/d/1YYWwdu2dw-ooXXQGW3PddA0TOvwoSvVHmNN3BNoLE2U/edit) (internal only)|Eng VP Staff, Finance & Exec leadership|Monthly|
+|What's Happening in Infrastructure|[Infrastructure Group Conversation](https://docs.google.com/document/d/1zELoftrommhRdnEOAocE6jea6w7KngUDjTUQBlMCNAU/edit?usp=sharing) (internal only)|All Company|Monthly|
+|Infrastructure Leadership Discussion|[mStaff Weekly](https://docs.google.com/document/d/10x4cEIoU5yBZAF0zXEWL47hPLxC0Ue635rkxHL6iB5w/edit?usp=sharing) (internal only)|Infra VP Directs & all Managers|Tues|
+|Tactical RE team coordination|[Reliability Leader Team Sync](https://docs.google.com/document/d/1LgsQYzj5PEaBYyZ_ENxAkpvQd3Bgu3HJvH2GNgogiwY/edit?usp=sharing) (internal only)|Reliability Managers & Staff Eng|Mon & Thurs|
+|Practical exercises to improve team capabilities|[Firedrills](https://docs.google.com/a/gitlab.com/document/d/1mppLPq4beUawcvde_N3GvxM--vSdFriYbdRdTR4zrGY/edit?usp=drive_web) (internal only)|All Infra|Weds|
+|Discussions for Oncall Handover & Newsletter|[Oncall Handover](https://gitlab.com/gitlab-com/gl-infra/infrastructure/-/issues?label_name%5B%5D=Reliability-Team-Newsletter)|Ending & Starting EOC| Tues|
+
+##### Infrastructure Key Review
+[Key Review meetings](https://about.gitlab.com/handbook/key-review/) provide the Infrastructure leadership the opportunity to inform the executive team of our [performance indicator](https://about.gitlab.com/handbook/engineering/infrastructure/performance-indicators/) progress, results on OKRs, and updates on any [Cross-functional Key Initiatives](https://about.gitlab.com/company/team/structure/working-groups/#top-cross-functional-initiatives) which we are leading.
+
+Infrastructure Key Review meetings are facilitated and led by VP of Infrastructure, Director of Infrastructure Platform, and Director of Reliability Engineering.
+
+##### Infrastructure Group Conversation
+[Group Conversation meetings](https://about.gitlab.com/handbook/group-conversations/) take the information from the Key Review (plus any additional topics) and present this to an audience that is all of GitLab, and for Infrastructure, is a Public livestream.
+
+Coordination of Infrastructure Group Conversation materials and facilitation of the discussion is a rotating role among the managers within Infrastructure.
+
+FY23 Infrastructure Group Conversation DRI [Schedule](https://docs.google.com/spreadsheets/d/1SHJaGBwKcOCmmKfL0eyaTWNuTqPbQDQFbipAPM5SEfw/edit#gid=479046138)(internal only)
+
+Quick checklist for the host (time order):
+
+1. Make the GC slides (copy from a prior presentation) ~ 10 days before the GC
+2. Watch how to stream on youtube - https://about.gitlab.com/handbook/marketing/marketing-operations/youtube/#livestream-with-zoom
+3. Do a test stream on youtube.
+4. Review the [handbook instructions for Group Conversation Meeting Leaders](https://about.gitlab.com/handbook/group-conversations/#for-meeting-leaders) and follow the required process.
+5. 20 minutes before - open up Zoom and check for any updates.
+
+|**GC Date**|**DRI**|
+|April 6|Amy P|
+|May 18|Dave S|
+|July 5|Kenn W|
+|August 11|Anna Liisa M|
+|September 22|Rachel N|
+|November 8|Liam M|
+|December 20|Michele B|
+|TBD|Anthony F|
+
+##### GitLab SaaS Infrastructure
+
+This weekly meeting has been discontinued as of Aug 23, 2021. Topics in this meeting became redundant to other coordination in the Engineering Allocation, GitLab.com Standup, and Incident Review meetings.
+
+##### Reliability & Security Daily Standup
+This daily meeting has been discontinued as of Oct 17, 2022. Improved maturity of other process along with overall improved reliability and security results led to reduced need for this session. It is expected that, as needed, follow-up sync discussions may be required for high-severity incident follow-up and these are to be scheduled as part of the overall incident management process.
+
+##### Reliability discussions and firedrills
+
+Reliability discussions and firedrills is a **purely technical meeting** for Infrastructure ICs to discuss technical topics. The agenda is driven by:
+1. Issues that are proposing Firedrill exercises
+2. Sharing of technical knowledge (demos or overviews) from Corrective Actions from Incident Reviews.
+3. Readiness reviews from the [readiness repo](https://gitlab.com/gitlab-com/gl-infra/readiness/-/tree/master/library)
+
+Project status discussions are strictly out of bounds in this (the only exception being the resolution of technical dependencies).
+
+While open discussions are welcome, it is strongly recommended that written designs are used as the source of agenda items. This allows everyone gain the required context–before the meeting starts–for an engaging conversation.
+
+During discussions, it is ok to point shortcomings for a given design. This is one way in which we expand our angle of vision and learn. In general, however, **make it a point to provide alternatives**.
+
+##### Staff/Newsletter Meetings
+
+We have weekly infrastructure oncall handover and staff meetings. These meetings are organized by Infrastructure Managers that occur as a time for SREs to have weekly handover notes for Oncall and other announcements for the team.  We run these meetings from the [Team Newsletter issues](https://gitlab.com/gitlab-com/gl-infra/infrastructure/-/issues?label_name%5B%5D=Reliability-Team-Newsletter).
+
+##### mStaff
+
+Infrastructure mStaff is a loose denomination for the group of people who report directly to the Vice President of Infrastructure. This is a group composed of both managers and individual contributors, and they are responsible for the overall direction of Infrastructure and the achievement of our goals:
+
+The weekly mStaff brings together Infrastructure's management team for a weekly sync to prepare for the week and address issues that require attention. The meeting is organized by the VP of Infrastructure.
+
+<%= partial "handbook/engineering/infrastructure/_common_links.html" %>
+
+[library]: https://gitlab.com/gitlab-com/gl-infra/readiness/-/tree/master/library
+
+[strategy]: /company/strategy/
+[transparency]: /handbook/values/#transparency
+[contribute]: /company/mission/#everyone-can-contribute
